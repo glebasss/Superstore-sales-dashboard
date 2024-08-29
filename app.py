@@ -477,7 +477,36 @@ page_2 = dbc.Container([
     ], style={'height': '100vh'}),
 ], fluid=True, className="mt-4")
 
+allert_press = dbc.Alert(
+    [
+        html.H3("Some advices!!", className="alert-heading",
+                style={'color': fontcolor2, 'text-align': 'center', 'font-weight': 'bold'}),
+        html.P(
+            "You can interact with the charts by clicking on them.",
+            style={'font-size': '18px',
+                   'color': fontcolor2, 'text-align': 'center'}
+        ),
+
+    ],
+    duration=6500,
+    style={
+        'width': '500px',
+        'margin': '0 auto',
+        'text-align': 'center',
+        'position': 'fixed',
+        'z-index': '1000',
+        'left': '0',
+        'right': '0',
+        'background-color': fontcolor1,
+        'border': fontcolor1,
+        'text-align': 'center',
+        'opacity': '0.85',
+    }
+)
+
+
 app.layout = dbc.Container([
+    allert_press,
     dcc.Location(id='url', refresh=False),
     dbc.NavbarSimple(
         brand="Superstore",
