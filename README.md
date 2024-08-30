@@ -1,4 +1,7 @@
 ## 📊 Superstore Sales Dashboard
+*link:* https://superstore-sales-dashboard-myu7.onrender.com/ 
+
+**Just wait for 20 seconds. Server should load graphs**
 
 ### **Overview**
 
