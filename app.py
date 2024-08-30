@@ -1315,4 +1315,4 @@ def update_modal_figure_sub_category_in_state(clickData, figure):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8050)
+    app.run_server(debug=True, port=10000)
