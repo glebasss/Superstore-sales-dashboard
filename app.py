@@ -48,18 +48,19 @@ def create_modal(graph_id, title):
             dbc.ModalBody(
                 dcc.Graph(
                     id=f'{graph_id}-modal',
-                    style={'height': '80vh'},  # Большой график
+                    style={'height': '80vh'},
                     config=config,
                 )
             ),
         ],
         id=f'{graph_id}-modal-container',
-        size="xl",  # Размер модального окна
-        is_open=False  # По умолчанию закрыто
+        size="xl",
+        is_open=False
     )
 
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.MORPH])
+server = app.server
 app.config.suppress_callback_exceptions = True
 
 with open('state_codes.json', 'r') as f:
@@ -69,21 +70,19 @@ fontcolor2 = '#00008B'
 cardcolor = '#4069E1'
 second_layercol = '#C0C0C0'
 config = {
-    'displayModeBar': True,  # Показывает панель инструментов (ModeBar)
-    'responsive': True,  # Делает график адаптивным по размеру
-    'scrollZoom': True,  # Включает возможность зуммирования скроллом
-    'doubleClick': 'reset+autosize',  # Двойной клик для сброса масштаба и размера
-    'displaylogo': False,  # Убирает логотип Plotly из панели инструментов
-    # Добавление дополнительных кнопок панели инструментов
+    'displayModeBar': True,
+    'responsive': True,
+    'scrollZoom': True,
+    'doubleClick': 'reset+autosize',
+    'displaylogo': False,
     'modeBarButtonsToAdd': ['toggleSpikelines', 'resetScale2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d', 'resetViews', 'toggleHover', 'resetGeo'],
-    # Убирает ненужные кнопки, например, выбор областей
     'modeBarButtonsToRemove': ['lasso2d', 'select2d'],
     'toImageButtonOptions': {
-        'format': 'png',  # Формат изображения при сохранении
-        'filename': 'custom_image',  # Имя файла при сохранении
-        'height': 800,  # Высота изображения
-        'width': 1200,  # Ширина изображения
-        'scale': 2  # Масштаб изображения
+        'format': 'png',
+        'filename': 'custom_image',
+        'height': 800,
+        'width': 1200,
+        'scale': 2
     }
 }
 
@@ -112,14 +111,11 @@ card8 = MyCard('card8', 'text-card8', 'Average Shipping Time').create_card()
 
 marks = {}
 
-# Добавление меток для каждого года
 for year in range(df_data['Order Date'].dt.year.min(), df_data['Order Date'].dt.year.max() + 1):
-    # Первый день года
     date_start = pd.to_datetime(f'{year}-01-01')
     date_num_start = (date_start - df_data['Order Date'].min()).days
     marks[date_num_start] = str(year)
 
-    # Полугодие (второе полугодие)
     date_mid = pd.to_datetime(f'{year}-07-01')
     date_num_mid = (date_mid - df_data['Order Date'].min()).days
     marks[date_num_mid] = f'{year}-H2'
@@ -411,7 +407,7 @@ page_2 = dbc.Container([
                     'font-weight': 'bold',
                     'font-size': '16px',
                     'color': fontcolor2,
-                    'background-color': 'transparent',  # Прозрачный фон
+                    'background-color': 'transparent',
                     'padding': '5px',
                     'width': '700px',
                     'margin-bottom': '10px'
@@ -470,7 +466,7 @@ page_2 = dbc.Container([
                     'font-weight': 'bold',
                     'font-size': '16px',
                     'color': fontcolor2,
-                    'background-color': 'transparent',  # Прозрачный фон
+                    'background-color': 'transparent',
                     'padding': '5px',
                     'width': '700px',
                     'margin-bottom': '10px',
@@ -479,7 +475,7 @@ page_2 = dbc.Container([
             ),
             dcc.Slider(2, 15, 1, value=7, id='slider-of-products'),
             dcc.Graph(figure={}, id='products', style={
-                      'height': '90vh'}),  # Полная высота колонки
+                      'height': '90vh'}),
         ], width=6)
     ], style={'height': '100vh'}),
 ], fluid=True, className="mt-4")
@@ -517,14 +513,13 @@ app.layout = dbc.Container([
     dcc.Location(id='url', refresh=False),
     dbc.NavbarSimple(
         brand="Superstore",
-        # Увеличение размера текста и добавление жирности
         brand_style={'color': fontcolor1,
                      'font-size': '36px', 'font-weight': 'bold'},
         brand_href="/",
         color=fontcolor2,
         dark=True,
-        expand='lg',  # Расширение на больших экранах
-        style={'width': '100%'},  # Задание ширины навбара
+        expand='lg',
+        style={'width': '100%'},
         children=[
             dbc.NavItem(dcc.Link(children='Category Sales', href='/',
                         className='nav-link', style={'color': fontcolor1, 'font-size': '18px'})),
@@ -714,7 +709,6 @@ def update_bar_char(_, clickData, val, date, coef_or_profit, segment_type, ship_
               else 0 for i in df_subs_cat[val]]
     )
 
-    # Настройка заголовка и легенды
     fig3.update_layout(
         title=dict(
             text='Category Distribution of Sales',
