@@ -379,10 +379,17 @@ page_2 = dbc.Container([
     dbc.Row([
             dbc.Col([
                 html.H1('Product popularity',
-                        className='text-center mt-4 md-4',
+                        className='text-center mt-0 md-4',
                         style={'color': fontcolor2},
                         ),
-            ], width=12),
+                    html.Hr(style={
+                        'border': 'none',
+                        'border-top': '8px solid',
+                        'width': '100%',
+                        'margin-top': '20px',
+                        'margin-bottom': '20px'
+                    }),
+                    ], width=12),
             ]),
     dbc.Row([
         dbc.Col([
@@ -1048,7 +1055,7 @@ def profit_sale_product_compare(_, discount, selected_product):
     df_ = df_[['Sales', 'Profit', 'Product Name', 'short name', 'Discount_presence']].groupby(
         ['Product Name', 'short name', 'Discount_presence']).sum().reset_index()
     df_['Impact'] = df_['Profit']/df_['Sales']
-    df_['Impact'] = df_['Impact'] + 1
+    df_['Impact'] = (df_['Impact'] + 1).round(4)
     df_ = df_[df_['Discount_presence'].isin(discount)]
     fig = px.bar(
         df_,
