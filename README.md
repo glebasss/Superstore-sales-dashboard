@@ -1,13 +1,44 @@
 ## 📊 Superstore Sales Dashboard
-*link:* https://superstore-sales-dashboard-myu7.onrender.com/ 
+
+_link:_ https://superstore-sales-dashboard-myu7.onrender.com/ (The app might be very slow because it is hosted on a free server)
 
 **Just wait for 20 seconds. Server should load graphs**
 
-### **Overview**
+### **Description by me**
+
+This is my first dashboard and also my first project using DASH. **Specifically**, this app has three pages:
+
+- The first page provides an overview with all categories, where you can analyze data by pressing some buttons and submitting. You can also click on the graphs to open a larger graph window.Below graphs page have 8 cards which u can change while (rotating? or how to say(p.s believe u got it(p.s.s PLEASE)))
+- The second page focuses on states. Here, you also have graphs, a timeline, and a large window that appears when clicking on specific elements.
+- The third page is just about products.
+
+#### **Screenshots from app:**
+
+![Screenshot of the App Dashboard](images/1.png)
+![Screenshot of the App Dashboard](images/2.png)
+![Screenshot of the App Dashboard](images/3.png)
+![Screenshot of the App Dashboard](images/4.png)
+![Screenshot of the App Dashboard](images/5.png)
+![Screenshot of the App Dashboard](images/6.png)
+
+And also, if you like this project, please give it a star! (PLEASE!!!) :)
+
+If you have some interesting projects, I can work on them for almost free (or even absolutely free if they look appealing).
+
+##### If u want to launch this app locally all what u need is :
+
+1. Download app.py and requirements.txt (using any method—I’m sure you know how to do it)
+2. Download all libraries from requirements.txt
+
+- WHY AM I TALKING SMTH IF NOBODY WILL SEE IT AAAAAAAAAAA.
+
+### **Description by CHATGPT**
+
+#### **Overview**
 
 Welcome to the **Superstore Sales Dashboard**, a comprehensive and interactive web application designed to help you analyze and visualize sales data with ease. Built with Python's Dash and Plotly libraries, this dashboard offers a dynamic and visually appealing way to explore business data, make informed decisions, and uncover valuable insights. Whether you are a business analyst, a sales manager, or simply a data enthusiast, this dashboard has something to offer!
 
-### **🌟 Key Features**
+#### **🌟 Key Features**
 
 1. **Dynamic Data Visualizations**:
 
@@ -34,7 +65,7 @@ Welcome to the **Superstore Sales Dashboard**, a comprehensive and interactive w
 5. **Interactive Alerts and Modals**:
    - Helpful **alerts** guide users on how to interact with the dashboard, ensuring a smooth user experience. Additionally, **modal windows** provide enlarged views of charts for a deeper dive into the data.
 
-### **🚀 Why Use the Superstore Sales Dashboard?**
+#### **🚀 Why Use the Superstore Sales Dashboard?**
 
 - **Empower Decision-Making**: With data-driven insights at your fingertips, you can make more informed business decisions. Whether it's identifying top-performing products, understanding customer behavior, or optimizing sales strategies, this dashboard has you covered.
 - **Save Time and Effort**: No need to crunch numbers manually. The dashboard processes and visualizes data in real time, saving you hours of work and enabling you to focus on strategy and execution.
@@ -43,25 +74,25 @@ Welcome to the **Superstore Sales Dashboard**, a comprehensive and interactive w
 
 - **Great for Presentations**: The dashboard's sleek design and interactive features make it perfect for business presentations. Impress your stakeholders with live data insights and dynamic visualizations.
 
-### **💡 How to Interact with the Dashboard?**
+#### **💡 How to Interact with the Dashboard?**
 
 - **Click on Charts**: Dive deeper into the data by clicking on different parts of the charts. For example, clicking on a specific state in the sales map will show detailed sales data for that state.
 - **Use Filters**: Apply filters such as date ranges, product categories, and discount presence to customize the data view according to your needs.
 - **View Enlarged Charts**: Open modal views for detailed charts by clicking on the "info" icons, allowing for a more focused analysis of specific data points.
 
-### **🎯 Who Should Use This Dashboard?**
+#### **🎯 Who Should Use This Dashboard?**
 
 - **Business Analysts**: Quickly generate actionable insights from sales data to drive business growth.
 - **Sales Managers**: Monitor performance across regions and categories to optimize sales strategies.
 - **Marketing Teams**: Understand customer preferences and adjust campaigns to target the right audience.
 - **Data Enthusiasts**: Explore the power of data visualization and interactive dashboards with a real-world dataset.
 
-### **📦 Get Started Now!**
+#### **📦 Get Started Now!**
 
 Explore the Superstore Sales Dashboard and transform the way you analyze your business data. Get a holistic view of your sales performance, uncover hidden trends, and make data-driven decisions that matter.
 
 **Don't just analyze data—experience it!**
 
-### **For communication with me**
+#### **For communication with me**
 
 - **gmail:** ona2420@gmail.com
